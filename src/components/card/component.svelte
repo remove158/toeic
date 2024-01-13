@@ -2,14 +2,18 @@
 	import AnswerInfo from './info.svelte';
 	import ExampleInfo from './example.svelte';
 	import { questionInfo, select } from '../../store';
+	import Skip from './skip.svelte';
 
 	const prefixs = ['A', 'B', 'C', 'D'];
 </script>
 
-<div class="bg-white rounded-2xl shadow-lg border-1 px-4 py-8 flex flex-col gap-4">
+<div class="bg-white rounded-2xl shadow-lg border-1 px-4 py-8 flex flex-col gap-4 relative">
 	<h2 class="text-xl font-bold mb-4 text-center">
 		{$questionInfo.word.toUpperCase()}
 	</h2>
+	{#if $select !== -1}
+		<Skip />
+	{/if}
 	{#each $questionInfo.choices as choice, idx}
 		<button
 			disabled={$select !== -1}
