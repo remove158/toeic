@@ -36,6 +36,8 @@
   },
   "type": "module",
   "dependencies": {
+    "@sveltejs/adapter-node": "^3.0.0",
+    "@sveltejs/vite-plugin-svelte": "^3.0.1",
     "graphql-yoga": "^5.1.1"
   }
 }
