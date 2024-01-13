@@ -1,6 +1,6 @@
 import { createSchema, createYoga } from 'graphql-yoga';
 import type { RequestEvent, RequestHandler } from '@sveltejs/kit';
-import  { dictionary }  from './dictionary.js';
+import { dictionary } from './dictionary.js';
 import { getRandomInt, pickFourRandomly } from './utils.js';
 
 const yogaApp = createYoga<RequestEvent>({
@@ -61,6 +61,6 @@ const yogaApp = createYoga<RequestEvent>({
 	graphqlEndpoint: '/api/graphql',
 
 	// Needed to let Yoga use sveltekit's Response object
-	fetchAPI: {  Response  },
+	fetchAPI: { Response }
 }) satisfies RequestHandler;
 export { yogaApp as GET, yogaApp as POST };
