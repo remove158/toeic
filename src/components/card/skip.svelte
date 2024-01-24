@@ -5,9 +5,11 @@
 		const answer = $questionInfo.answer;
 		if ($select !== -1) {
 			questionInfo.set(await fetchQuestion());
+			select.set(-1);
+		} else {
+			const solution = $questionInfo.choices.indexOf(answer) ?? -1;
+			select.set(solution);
 		}
-		const solution = $questionInfo.choices.indexOf(answer) ?? -1;
-		select.set(solution);
 	};
 </script>
 

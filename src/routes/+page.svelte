@@ -4,17 +4,15 @@
 	import CardQuestion from '../components/card/component.svelte';
 	import { questionInfo } from '../store';
 	import { fetchQuestion } from '$lib/api';
-	import Skip from '../components/skip/component.svelte';
 
 	onMount(async () => {
 		questionInfo.set(await fetchQuestion());
 	});
 </script>
 
-<main>
+<main class="container h-full w-full space-y-4">
 	{#if $questionInfo}
 		<CardQuestion />
-		<Skip />
 	{:else}
 		<CardLoading />
 	{/if}
