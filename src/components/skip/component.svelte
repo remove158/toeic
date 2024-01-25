@@ -13,10 +13,10 @@
 	};
 </script>
 
-<footer>
+<footer class="fixed bottom-0 z-10 inset-x-0 h-12">
 	<button
 		on:click={updateQuestionInfo}
-		class={`hover:cursor-pointer group hover:bg-[#e85682] bg-[#fd6693] fixed bottom-0 z-10 inset-x-0 h-12 text-center flex flex-col items-center justify-center text-white font-bold `}
+		class={`hover:cursor-pointer group hover:bg-[#e85682] bg-[#fd6693] w-full  h-full text-center flex flex-col items-center justify-center text-white font-bold `}
 	>
 		<span>{$select === -1 ? 'Skip' : 'Next Question'}</span>
 	</button>
