@@ -10,7 +10,7 @@
 	});
 </script>
 
-<main class="container h-full w-full space-y-4">
+<main class="container px-4 h-full w-full space-y-4">
 	{#if $questionInfo}
 		<CardQuestion />
 	{:else}

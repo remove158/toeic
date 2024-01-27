@@ -1,5 +1,5 @@
 <header class="sticky w-full top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-[#3f4fa6]/80">
-	<div class="container flex justify-between text-white items-center h-16">
+	<div class="container px-2 flex justify-between text-white items-center h-16">
 		<h1 class="text-2xl">TOEIC Vocab</h1>
 		<div class="h-8 w-8 flex items-center justify-center">
 			<svg
